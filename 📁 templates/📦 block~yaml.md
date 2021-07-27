@@ -18,8 +18,10 @@ container   :
 alongside   : 
 contains    : 
 <%-* } %>
+<%-* if (this.app.plugins?.getPlugin('obsidian-advanced-uri')?._loaded) { %>
 # for [[obsidian~plugin~obsidian-advanced-uri]]
 uuid        : <%* tR += metadata.uuid; %>
+<%-* } %>
 # this note
 metadata:
     datetime    : 
@@ -51,9 +53,9 @@ source  :
 ```
 aliases     :: yaml block template
 description :: yaml block for all template files
-requires    :: [obsidian-juliandate, Templater]
+requires    :: [obsidian-advanced-uri, obsidian-juliandate, Templater]
 scope       :: 
-tags        :: [Obsidian/template/block/yaml, yaml, Obsidian/plugin/Templater, Obsidian/plugin/obsidian-juliandate]
+tags        :: [Obsidian/template/block/yaml, yaml, Obsidian/plugin/obsidian-advanced-uri, Obsidian/plugin/obsidian-juliandate, Obsidian/plugin/Templater]
 title       :: yaml template
 type        :: template~block~yaml
 ```

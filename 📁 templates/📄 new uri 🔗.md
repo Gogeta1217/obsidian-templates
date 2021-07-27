@@ -26,7 +26,7 @@ if (parsedResource.subdomain.split('.')[0] === 'www' && parsedResource.subdomain
 }
 uri.label              = tp.frontmatter?.uri?.label ?? (uri.data.match(global_regex.matchUrlSchemeHttp) ? 
                             await this.app.plugins?.getPlugin('obsidian-auto-link-title')?.fetchUrlTitle(uri.data) : 
-                                `common name for ${uri.data}`)                                                              // if http(s) scheme try to fetch uri title
+                                `common name for ${uri.data}`)                                                              // if http(s) scheme fetch url title
 uri.label              = await tp.system.prompt(`Label for ${uri.data}`, uri.label, true);                                  // prompt for label
 uri.path               = tp.frontmatter?.uri?.path ?? await tp.system.prompt(`Storage path for ${uri.data}`, '', true);     // prompt for path
 uri.type               = await tp.system.suggester(['Bookmark entry', 'Allow list entry', 'Deny list entry'], 
@@ -50,7 +50,7 @@ tR += (await tp.file.include('[[📦 block~yaml]]'))
         .replace(/^((?:[ ]+)?tags(?:[ ]+)?:)(?:[ ]+)?$/gm,          `$1 [${(await tp.system.prompt('Tags', tp.frontmatter?.tags?.join(', ') ?? 
             'Obsidian/uri', true))?.replace(/\s+/g,'').trim().split(',').join(', ')}]`)
             // preserve existing uuid
-        .replace(/^((?:[ ]+)?uuid(?:[ ]+)?:)(?:[ ]+)?(.*)$/gm,       `$1 ${tp.frontmatter?.uuid ?? '$2'}`)
+        .replace(/^((?:[ ]+)?uuid(?:[ ]+)?:)(?:[ ]+)?(.*)$/gm,      `$1 ${tp.frontmatter?.uuid ?? '$2'}`)
             // replace metadata.description
         .replace(/^((?:[ ]+)?description(?:[ ]+)?:)(?:[ ]+)?$/gm,   `$1 "${uri.description}"`)
             // replace metadata.title
