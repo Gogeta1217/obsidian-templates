@@ -9,8 +9,9 @@
 
 #### Optional
 
-- [Obsidian Auto Link Title](https://github.com/zolrath/obsidian-auto-link-title)
 - [Breadcrumb trail](https://github.com/SkepticMystic/breadcrumbs)
+- [Obsidian Advanced URI](https://github.com/Vinzent03/obsidian-advanced-uri)
+- [Obsidian Auto Link Title](https://github.com/zolrath/obsidian-auto-link-title)
 - [Obsidian Julian Date Plugin](https://github.com/THeK3nger/obsidian-juliandate)
 
 ## How to use
