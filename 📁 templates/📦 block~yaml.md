@@ -20,18 +20,18 @@ contains    :
 <%-* } %>
 <%-* if (this.app.plugins?.getPlugin('obsidian-advanced-uri')?._loaded) { %>
 # for [[obsidian~plugin~obsidian-advanced-uri]]
-uuid        : <%* tR += metadata.uuid; %>
+uuid        : <% metadata.uuid %>
 <%-* } %>
 # this note
 metadata:
     datetime    : 
-        created : <%* tR += metadata.datetime.created; %>
+        created : <% metadata.datetime.created %>
         # from [[obsidian~plugin~obsidian-juliandate]]
 <%-* if (this.app.plugins?.getPlugin('obsidian-juliandate')?._loaded) { %>
-        julian  : <%* tR += metadata.datetime.julian ?? ''; %>
+        julian  : <% metadata.datetime?.julian %>
 <%-* } %>
     description : 
-    scope       : <%* tR += metadata.scope; %>
+    scope       : <% metadata.scope %>
     status      :
         archived: false
         reviewed: false

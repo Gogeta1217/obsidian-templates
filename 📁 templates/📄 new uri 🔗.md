@@ -37,9 +37,9 @@ uri.description        = await tp.system.prompt(`Use case for ${uri.data}`, (tp.
 %>
 uri     : 
     data    : <%* tR += `&uri.data ${uri.data}`; %>
-    label   : <%* tR += uri.label; %>
-    path    : <%* tR += uri.path; %>
-    type    : <%* tR += uri.type;  %>
+    label   : <% uri.label %>
+    path    : <% uri.path %>
+    type    : <% uri.type %>
 <%*
 tR += (await tp.file.include('[[📦 block~yaml]]'))
             // remove yaml directives
@@ -69,7 +69,7 @@ tR += (await tp.file.include('[[📦 block~yaml]]'))
 
 ---
 
-## Links <%* tR += uri.data; %>
+## Links <% uri.data %>
 
 ```query
 /<%*
