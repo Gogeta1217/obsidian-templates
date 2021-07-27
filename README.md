@@ -24,7 +24,7 @@
 
 ## Output
 
-### [📁 templates/📄 new uri 🔗.md](%F0%9F%93%81%20templates/%F0%9F%93%84%20new%20uri%20%F0%9F%94%97.md)
+### [`📁 templates/📄 new uri 🔗.md`](%F0%9F%93%81%20templates/%F0%9F%93%84%20new%20uri%20%F0%9F%94%97.md)
 
 #### Editor
 
