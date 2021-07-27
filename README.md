@@ -19,7 +19,7 @@
 ### Required steps
 
 - Copy [`📁 templates`](%F0%9F%93%81%20templates) contents to your [Templater](https://github.com/SilentVoid13/Templater) template folder
-- Copy [`📁 data`](%F0%9F%93%81%20data) to your vault's root or manually edit included template files to point to [global.md](%F0%9F%93%81%20data/global.md)
+- Copy [`📁 data`](%F0%9F%93%81%20data) to your vault's root or manually edit included template files to point to [`global.md`](%F0%9F%93%81%20data/global.md)
 
 ### Optional steps
 
