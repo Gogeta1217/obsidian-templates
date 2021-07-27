@@ -29,11 +29,11 @@
 
 ### [`📁 templates/📄 new uri 🔗.md`](%F0%9F%93%81%20templates/%F0%9F%93%84%20new%20uri%20%F0%9F%94%97.md)
 
-#### Editor
+Editor
 
 > ![Pasted image 20210727154501.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210727154501.png)
 
-#### Preview
+Preview
 
 > ![Pasted image 20210727155750.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210727155750.png)
 
