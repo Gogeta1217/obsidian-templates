@@ -15,16 +15,16 @@
 
 ## How to use
 
-- Copy [`📁 templates`](📁 templates)'s contents to your [Templater](https://github.com/SilentVoid13/Templater) template folder
-- Copy [`📁 data`](📁 data) to your vault's root or manually edit included template files to point to [`global.md`](global.md)
+- Copy [📁 templates](📁 templates)'s contents to your [Templater](https://github.com/SilentVoid13/Templater) template folder
+- Copy [📁 data](📁 data) to your vault's root or manually edit included template files to point to [global.md](global.md)
 
 ### Optional
 
-- Reconfigure Breadcrumb trail to use the metadata field names provided in [`📦 block~yaml.md`](📦 block~yaml.md) or replace metadata field names in [`📦 block~yaml.md`](📦 block~yaml.md) with your settings from Breadcrumb trail
+- Reconfigure Breadcrumb trail to use the metadata field names provided in [📦 block~yaml.md](📦 block~yaml.md) or replace metadata field names in [📦 block~yaml.md](📦 block~yaml.md) with your settings from Breadcrumb trail
 
 ## Outputs
 
-### from [`📁 templates/📄 new uri 🔗.md`](📁 templates/📄 new uri 🔗.md)
+### from [📁 templates/📄 new uri 🔗.md](📁 templates/📄 new uri 🔗.md)
 
 #### Editor
 
