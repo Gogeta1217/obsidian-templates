@@ -10,9 +10,8 @@ let uri                 = {};                                                   
 async function promptUri() {
     return await tp.system.prompt('Enter URI', 'scheme://www.example.null', true);
 }
-console.log(tp.config.run_mode);
 if (tp.config.run_mode  === 1) {                                                            // new note from templater-obsidian:insert-templater
-    uri.data            = (tp.frontmatter?.uri?.data ?? await promptUri());                // prompt for uri
+    uri.data            = (tp.frontmatter?.uri?.data ?? await promptUri());                 // prompt for uri
 }
 if (tp.config.run_mode  === 2) {                                                            // new note from link click
     uri.data            = parsedFileName?.resource.match(global_regex.matchUrlAny) ? 
@@ -20,7 +19,6 @@ if (tp.config.run_mode  === 2) {                                                
 }
 uri.data                = encodeURI(uri.data.match(global_regex.matchUrlSchemeAny) ? 
                             uri.data : `https://${uri.data}`);                              // check uri from scheme and add default https scheme if false
-console.log("here again");
 parsedResource          = uri.data.match(global_regex.matchUrlAny).groups;                  // re-parse uri
 if (parsedResource.subdomain.split('.')[0] === 'www' && parsedResource.subdomain.split('.')[1] === parsedResource.domain) {             // uri contains www
     uri.data = `${parsedResource.scheme?? ''}${parsedResource.domain ?? ''}.${parsedResource.tld ?? ''}${parsedResource.path ?? ''}`;   // recreate uri w/o www
@@ -61,7 +59,7 @@ tR += (await tp.file.include('[[📦 block~yaml]]'))
         .replace(/^((?:[ ]+)?type(?:[ ]+)?:)(?:[ ]+)?$/gm,          `$1 ${tp.config.template_file.basename
                                                                         .replace(/[^\x00-\x7F]+/g,'')
                                                                         .replace(/new/, '')
-                                                                        .toLowerCase().trim()}`)
+                                                                        .toLowerCase().trim().split('~')[0]}`)
         .trim();
 %>
 
@@ -84,7 +82,7 @@ const uniquefileName    = `uri~${uri.data
 await tp.file.rename(uniquefileName);
     // output #Obsidian/query/regex for uri
 tR                      += (parsedResource.subdomain === `${parsedResource.domain ?? ''}.${parsedResource.tld ?? ''}` ? 
-                            `${parsedResource.scheme ?? ''}`.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&') + `(www\\.)?` + `${parsedResource.subdomain ?? ''}`.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&') + `${parsedResource.path ?? ''}`.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&') : uri.data.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')) + '(?:\\/.*)?'; 
+                            `${parsedResource.scheme ?? ''}`.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&').replace(/^https?/gi, 'https?') + `(www\\.)?` + `${parsedResource.subdomain ?? ''}`.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&') + `${parsedResource.path ?? ''}`.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&') : uri.data.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')) + '(?:\\/.*)?'; 
 %>/ -file:(<%* tR += uniquefileName; %>)
 ```
 
