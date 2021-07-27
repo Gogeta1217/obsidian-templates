@@ -11,8 +11,9 @@
 ```
 aliases     :: header block template
 description :: header block for templates
+requires    :: [obsidian-juliandate, Templater]
 scope       :: 
-tags        :: [Obsidian/template/block/header, Obsidian/plugin/Templater, Obsidian/plugin/Dataview]
+tags        :: [Obsidian/template/block/header, Obsidian/plugin/obsidian-dataview, Obsidian/plugin/Templater]
 title       :: header block template
 type        :: template~block~header
 ```

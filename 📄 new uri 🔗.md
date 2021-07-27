@@ -1,6 +1,6 @@
 ---
 <%_* 
-const global_regex      = Object.fromEntries(Object.entries(await this.app.plugins.plugins['dataview'].api.page('📁 data/global.md').regex).map(entry => { 
+const global_regex      = Object.fromEntries(Object.entries(await this.app.plugins.getPlugin('dataview').api.page('📁 data/global.md').regex).map(entry => { 
                             regex = entry[1].match(/(\/?)(.+)\1([a-z]*)/i); 
                             return [entry[0], new RegExp(regex[2], regex[3])];
                         } ));                                                               // regex library
@@ -14,21 +14,21 @@ if (tp.config.run_mode  === 1) {                                                
 if (tp.config.run_mode  === 2) {                                                            // new note from link click
     uri.data            = parsedFileName.resource;                                          // get uri from file name
 }
-uri.data                = uri.data.match(global_regex.matchUrlSchemeAny) ? uri.data : `https://${uri.data}`;    // check uri from scheme and add default https scheme if false
-parsedResource          = uri.data.match(global_regex.matchUrlAny).groups;                                      // re-parse uri
+uri.data                = encodeURI(uri.data.match(global_regex.matchUrlSchemeAny) ? 
+                            uri.data : `https://${uri.data}`);                              // check uri from scheme and add default https scheme if false
+parsedResource          = uri.data.match(global_regex.matchUrlAny).groups;                  // re-parse uri
 if (parsedResource.subdomain.split('.')[0] === 'www' && parsedResource.subdomain.split('.')[1] === parsedResource.domain) {             // uri contains www
     uri.data = `${parsedResource.scheme?? ''}${parsedResource.domain ?? ''}.${parsedResource.tld ?? ''}${parsedResource.path ?? ''}`;   // recreate uri w/o www
     parsedResource     = uri.data.match(global_regex.matchUrlAny).groups;                                                               // re-parse uri
 }
 uri.label              = tp.frontmatter?.uri?.label ?? (uri.data.match(global_regex.matchUrlSchemeHttp) ? 
-                            await this.app.plugins.plugins['obsidian-auto-link-title'].fetchUrlTitle(uri.data) : `common name for ${uri.data}`) // if http(s) scheme try to fetch uri title
+                            await this.app.plugins?.getPlugin('obsidian-auto-link-title')?.fetchUrlTitle(uri.data) : `common name for ${uri.data}`) // if http(s) scheme try to fetch uri title
 uri.label              = await tp.system.prompt(`Label for ${uri.data}`, uri.label, true);                                                      // prompt for label
 uri.path               = tp.frontmatter?.uri?.path ?? await tp.system.prompt(`Storage path for ${uri.data}`, '', true);                          // prompt for path
 uri.type               = await tp.system.suggester(['Bookmark entry', 'Allow list entry', 'Deny list entry'], 
                             ['bookmark', 'allowlist', 'denylist'], true, `URI type for ${uri.data}`);                                           // prompt for type
 uri.description        = await tp.system.prompt(`Use case for ${uri.data}`, (tp.frontmatter?.metadata?.description ? tp.frontmatter?.metadata?.description?.replace(/\\/g, '\\') : 
                                 `URI page for [${uri.label}](${uri.data}) which is a ${uri.type} entry`), true);                                 // prompt for description
-console.log(uri.description);
 %>
 uri     : 
     data    : <%* tR += `&uri.data ${uri.data}`; %>
@@ -92,8 +92,9 @@ tR                      += (parsedResource.subdomain === `${parsedResource.domai
 ```
 aliases     :: uri note template
 description :: template for uri entries
+requires    :: [obsidian-auto-link-title, obsidian-dataview, Templater]
 scope       :: 
-tags        :: [Obsidian/template/note/uri, Obsidian/plugin/Templater, Obsidian/plugin/Dataview]
+tags        :: [Obsidian/template/note/uri, Obsidian/plugin/obsidian-auto-link-title, Obsidian/plugin/obsidian-dataview, Obsidian/plugin/Templater]
 title       :: uri note template
 type        :: template~note~uri
 ```
