@@ -7,7 +7,7 @@
 - [Obsidian Dataview](https://github.com/blacksmithgu/obsidian-dataview)
 - [Templater](https://github.com/SilentVoid13/Templater)
 
-#### Optional
+### Optional
 
 - [Breadcrumb trail](https://github.com/SkepticMystic/breadcrumbs)
 - [Obsidian Advanced URI](https://github.com/Vinzent03/obsidian-advanced-uri)
@@ -16,10 +16,12 @@
 
 ## How to use
 
+### Required steps
+
 - Copy [`📁 templates`](%F0%9F%93%81%20templates) contents to your [Templater](https://github.com/SilentVoid13/Templater) template folder
 - Copy [`📁 data`](%F0%9F%93%81%20data) to your vault's root or manually edit included template files to point to [global.md](%F0%9F%93%81%20data/global.md)
 
-### Optional
+### Optional steps
 
 - Reconfigure Breadcrumb trail to use the metadata field names provided in [`📦 block~yaml.md`](%F0%9F%93%81%20templates/%F0%9F%93%A6%20block~yaml.md) or replace metadata field names in [`📦 block~yaml.md`](%F0%9F%93%81%20templates/%F0%9F%93%A6%20block~yaml.md) with your settings from Breadcrumb trail
 
