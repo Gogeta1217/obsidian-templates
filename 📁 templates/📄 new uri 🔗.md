@@ -108,10 +108,13 @@ version     :: 1
 
 ## meta~todo
 
-- [ ] #Obsidian/template/uri/regex match metadata.<subproperly> properly to avoid mismatching
-- [ ] #Obsidian/template/uri/rename check for existing file, cancel generation, delete file and then open existing file?
+- [ ] #Obsidian/template/note/uri/regex match metadata.<subproperly> properly to avoid mismatching #TODO
+- [ ] #Obsidian/template/note/uri/rename check for existing file, cancel generation, delete file and then open existing file? #TODO
+- [ ] #Obsidian/template/note/uri/refactor right now, we're only handling URLs - URN need to be supported #TODO
 
 ## meta~notes
+
+- works on mobile
 
 ## meta~inbox
 

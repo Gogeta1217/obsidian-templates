@@ -9,7 +9,7 @@
 
 <% "<% await tp.file.include('[[📁 templates/📦 block~mentions]]') %>" %>
 
-<%* tR += (await tp.file.include('[[📦 block~meta~template]]')).replace(/<\\%/g, '<%').replace(/:\\:/g, '::').replace(/\\#/g, '#').replace(/\n+$/, ''); %>
+<%* tR += (await tp.file.include('[[📦 block~meta]]')).replace(/<\\%/g, '<%').replace(/:\\:/g, '::').replace(/\\#/g, '#').replace(/\n+$/, ''); %>
 <%-*
 /*
 
@@ -31,7 +31,10 @@ version     :: 1
 
 ## meta~todo
 
+- [ ] #Obsidian/template/note/template/mobile fix on mobile #TODO
+
 ## meta~notes
+
 
 ## meta~inbox
 
