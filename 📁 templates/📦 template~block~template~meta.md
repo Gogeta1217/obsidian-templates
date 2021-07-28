@@ -29,23 +29,23 @@ _%>
 ## meta~data
 
 ```dataviewfielda
-aliases     :: 
-description :: template for x entries
-requires    :: plugin~y
+aliases     :: template meta
+description :: meta block with headings for templates
+requires    :: dataview, Templater
 scope       :: 
 tags        :: [Obsidian/template/type/x]
-title       :: 
-type        :: template~type~x
+title       :: 📦 template~block~meta
+type        :: template~block~meta
 ```
 
 ## meta~todo
 
-- [ ] manually run template through #Obsidian/plugin/Templater replacing `/` to render 'stage 2' which should prompt for input with current value like in [[📄 new uri 🔗]] - rough example: `description :: </%* tR += ?? {dataviewcurrent}.description "template for x entries" %>`
+- [ ] manually run template through #Obsidian/plugin/Templater replacing `/` to render 'stage 2' version which should prompt for input with current values like in [[📄 new uri 🔗]] - rough example: `description :\: </%* let description = {dataviewcurrent}.description ?? ''; description = await tp.system.prompt('description', description); tR += description; %>`
     - allows us to preserve existing dataview inline fields but replace everything else
 
 ## meta~notes
 
-- include statement has to strip code and metadata like `<%* tR += (await tp.file.include('[[📦 template~block~template~meta]]')).replace(/<\\%/g, '<%').replace(/:\\:/g, '::').replace(/\\#/g, '#').replace(/\n+$/, ''); %>`
+- `tp.file.include` statement has to strip code and metadata like `<%* tR += (await tp.file.include('[[📦 template~block~template~meta]]')).replace(/<\\%/g, '<%').replace(/:\\:/g, '::').replace(/\\#/g, '#').replace(/\n+$/, ''); %>`
 
 ## meta~inbox
 
