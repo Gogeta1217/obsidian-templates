@@ -96,12 +96,14 @@ tR                      += (parsedResource.subdomain === `${parsedResource.domai
 
 ```
 aliases     :: uri note template
-description :: template for uri entries
+created     :: 2021-07-28T03:20:09-04:00
+description :: template for uri entries (types: bookmarks, allowlist, denylist)
 requires    :: [obsidian-auto-link-title, dataview, Templater]
 scope       :: 
 tags        :: [Obsidian/template/note/uri, Obsidian/plugin/obsidian-auto-link-title, Obsidian/plugin/dataview, Obsidian/plugin/Templater]
-title       :: uri note template
+title       :: 🔗 note~uri
 type        :: template~note~uri
+version     :: 1
 ```
 
 ## meta~todo
