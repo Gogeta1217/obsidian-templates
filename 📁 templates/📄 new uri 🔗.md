@@ -90,28 +90,28 @@ tR                      += (parsedResource.subdomain === `${parsedResource.domai
 
 <%-*
 /*
-# meta
+# template
 
-## yaml
+## meta~data
 
 ```
 aliases     :: uri note template
 description :: template for uri entries
-requires    :: [obsidian-auto-link-title, obsidian-dataview, Templater]
+requires    :: [obsidian-auto-link-title, dataview, Templater]
 scope       :: 
-tags        :: [Obsidian/template/note/uri, Obsidian/plugin/obsidian-auto-link-title, Obsidian/plugin/obsidian-dataview, Obsidian/plugin/Templater]
+tags        :: [Obsidian/template/note/uri, Obsidian/plugin/obsidian-auto-link-title, Obsidian/plugin/dataview, Obsidian/plugin/Templater]
 title       :: uri note template
 type        :: template~note~uri
 ```
 
-## todo
+## meta~todo
 
 - [ ] #Obsidian/template/uri/regex match metadata.<subproperly> properly to avoid mismatching
 - [ ] #Obsidian/template/uri/rename check for existing file, cancel generation, delete file and then open existing file?
 
-## notes
+## meta~notes
 
-## inbox
+## meta~inbox
 
 */
 _%>

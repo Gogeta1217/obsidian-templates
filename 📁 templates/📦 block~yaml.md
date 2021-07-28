@@ -46,27 +46,27 @@ source  :
 ---
 <%_ *
 /* 
-# meta
+# template
 
-## yaml
+## meta~data
 
 ```
-aliases     :: yaml block template
+aliases     :: yaml template block
 description :: yaml block for all template files
 requires    :: [obsidian-advanced-uri, obsidian-juliandate, Templater]
 scope       :: 
 tags        :: [Obsidian/template/block/yaml, yaml, Obsidian/plugin/obsidian-advanced-uri, Obsidian/plugin/obsidian-juliandate, Obsidian/plugin/Templater]
-title       :: yaml template
+title       :: 📦 block~yaml
 type        :: template~block~yaml
 ```
 
-## todo
+## meta~todo
 
 - [ ] create a loop for other templates to preserve existing frontmatter data when overwriting a file - see yaml `uuid` replace operation within [[📄 new uri 🔗]] for example
 
-## notes
+## meta~notes
 
-## inbox
+## meta~inbox
 
 */
 _%>

@@ -4,25 +4,25 @@
 
 <%_*
 /*
-# meta
+# template
 
-## yaml
+## meta~data
 
 ```
 aliases     :: header block template
 description :: header block for templates
-requires    :: [obsidian-dataview, Templater]
+requires    :: [dataview, Templater]
 scope       :: 
-tags        :: [Obsidian/template/block/header, Obsidian/plugin/obsidian-dataview, Obsidian/plugin/Templater]
-title       :: header block template
+tags        :: [Obsidian/template/block/header, Obsidian/plugin/dataview, Obsidian/plugin/Templater]
+title       :: 📦 block~header
 type        :: template~block~header
 ```
 
-## todo
+## meta~todo
 
-## notes
+## meta~notes
 
-## inbox
+## meta~inbox
 
 */
 _%>
