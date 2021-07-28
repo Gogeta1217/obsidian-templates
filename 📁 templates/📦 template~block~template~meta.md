@@ -33,7 +33,7 @@ aliases     :: template meta
 description :: meta block with headings for templates
 requires    :: dataview, Templater
 scope       :: 
-tags        :: [Obsidian/template/type/x]
+tags        :: [Obsidian/template/block/meta]
 title       :: 📦 template~block~meta
 type        :: template~block~meta
 ```
@@ -46,6 +46,7 @@ type        :: template~block~meta
 ## meta~notes
 
 - `tp.file.include` statement has to strip code and metadata like `<%* tR += (await tp.file.include('[[📦 template~block~template~meta]]')).replace(/<\\%/g, '<%').replace(/:\\:/g, '::').replace(/\\#/g, '#').replace(/\n+$/, ''); %>`
+- metadata is pretty redundant in this example but the extra fields may come in handy later
 
 ## meta~inbox
 
