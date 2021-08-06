@@ -27,7 +27,7 @@
 
 ## Overview
 
-![Pasted image 20210805204015.png](Pasted%20image%2020210805204015.png)
+![Pasted image 20210805204015.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210805204015.png)
 
 ## Examples
 
@@ -40,14 +40,14 @@ Editor
 Preview
 
 > ![Pasted image 20210727155750.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210727155750.png)
-### [`📦 block~plugin~dataview~js~table 🗺`](%F0%9F%93%A6%20block~plugin~dataview~js~table%20%F0%9F%97%BA.md)
+Metadata table provided by [Obsidian Metatable](https://github.com/arnau/obsidian-metatable) in preview mode
+
+### [`📦 block~plugin~dataview~js~table 🗺`](%F0%9F%93%81%20templates/%F0%9F%93%A6%20block~plugin~dataview~js~table%20%F0%9F%97%BA.md)
 
 Editor
 
-> ![Pasted image 20210805203542.png](Pasted%20image%2020210805203542.png)
+> ![Pasted image 20210805203542.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210805203542.png)
 
 Preview
 
-> ![Pasted image 20210805203428.png](Pasted%20image%2020210805203428.png)
-
-Metadata table provided by [Obsidian Metatable](https://github.com/arnau/obsidian-metatable) in preview mode
+> ![Pasted image 20210805203428.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210805203428.png)
