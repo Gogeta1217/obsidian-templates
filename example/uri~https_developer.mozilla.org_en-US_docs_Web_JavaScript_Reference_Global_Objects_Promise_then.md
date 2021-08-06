@@ -11,7 +11,7 @@ publish :
 tags    : [Obsidian/uri, javascript/promise, code, async, reference, Obsidian/plugin/Templater]
 # for [[obsidian~plugin~breadcrumbs]]
 container   : 
-alongside   : 
+near        : 
 contains    : 
 # for [[obsidian~plugin~obsidian-advanced-uri]]
 uuid        : 9e3241f5-ebff-4cf9-b15a-068cbab27998
