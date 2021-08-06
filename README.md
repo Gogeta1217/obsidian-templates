@@ -85,7 +85,7 @@ Preview
 > ![Pasted image 20210805213053.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210805213053.png)
 Metadata table provided by [Obsidian Metatable](https://github.com/arnau/obsidian-metatable) in preview mode
 
-### [`📦 block~plugin~dataview~js~table 🗺`](📦%20block~plugin~dataview~js~table%20⛓.md)
+### [`📦 block~plugin~dataview~js~table ⛓`](%F0%9F%93%81%20templates/%F0%9F%93%A6%20block~plugin~dataview~js~table%20%E2%9B%93.md)
 
 Editor
 
