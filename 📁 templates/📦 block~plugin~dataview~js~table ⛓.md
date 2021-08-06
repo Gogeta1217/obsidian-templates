@@ -1,11 +1,13 @@
 ## `fas:Map` Table
 
 ```dataviewjs
+// Variables
 const format = 'YYYYMMDD[T]HH:mm';
 const formatDay = 'YYYY-MM-DD'
 const matchEmoji = /[^\x00-\x7F]+/g;
 const folderNoteName = this.app.plugins.getPlugin('folder-note-plugin')?.settings?.folderNoteName;
 const breadcrumbs = this.app.plugins.getPlugin('breadcrumbs')?.settings;
+// Table
 dv.table(
     [// headings
         'Publish',
@@ -48,7 +50,12 @@ dv.table(
     .sort(n => n.file.mtime.toString(), 'desc')
     // columns
     .map(n => {
-    let folderNote = `${n.file.folder}/${folderNoteName}.md`;
+    // Functions
+        String.prototype.tooltip = function(s) {
+            return `<span role='img' aria-label='${s}'>${this}</span>`
+        };
+    // Variables
+        const folderNote = `${n.file.folder}/${folderNoteName}.md`;
         return [
     // Publish
         (n?.publish ?? n?.source?.publish) ? ((n?.publish ?? n?.source?.publish) ? '✔' : '❌') : null,
@@ -81,7 +88,7 @@ dv.table(
     // Version
         //n?.version ?? n?.source?.version,
     // Links   
-        (n.file.outlinks?.length === 0 && n.file.inlinks?.length === 0) ? '❌' : `🔽 ${n.file.inlinks.length} 🔼 ${n.file.outlinks.length}`,
+        (n.file.outlinks?.length === 0 && n.file.inlinks?.length === 0) ? '❌'.tooltip('orphan') : `${ n.file.inlinks.length > 0 ? '🔽'.tooltip('backlinks') + ' ' + n.file.inlinks.length : ''} ${ n.file.outlinks.length > 0 ? '🔼'.tooltip('outlinks') + ' ' + n.file.outlinks.length : ''}`.trim(),
     // Task
         Array.from(new Set(dv.array(n.file.tasks).map(v => {
             let m = v.text.match(/(?<t>\#)/i)?.groups?.t.toLowerCase(); 
