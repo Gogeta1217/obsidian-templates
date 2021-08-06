@@ -46,6 +46,7 @@ source:
 - [Auto Link Title](https://github.com/zolrath/obsidian-auto-link-title)
 - [Advanced Obsidian URI](https://github.com/Vinzent03/obsidian-advanced-uri)
 - [Breadcrumbs](https://github.com/SkepticMystic/breadcrumbs)
+- [Folder Note](https://github.com/xpgo/obsidian-folder-note-plugin)
 - [Icons](https://github.com/visini/obsidian-icons-plugin)
 - [Julian Date](https://github.com/THeK3nger/obsidian-juliandate)
 
@@ -57,8 +58,7 @@ source:
 
 ### Optional steps
 
-- ~~Reconfigure Breadcrumbs to use the metadata field names provided in [`📦 block~yaml.md`](%F0%9F%93%81%20templates/📦%20block~yaml%20✉.md) or replace metadata field names in [`📦 block~yaml.md`](%F0%9F%93%81%20templates/📦%20block~yaml%20✉.md) with your settings from Breadcrumbs~~
-- **Breadcrumbs field names are now read from the plugin settings**
+- Set your [Folder Note](https://github.com/xpgo/obsidian-folder-note-plugin) template to the contents of [`📦 template~plugin~folder-note~index 🗺`](%F0%9F%93%81%20templates/%F0%9F%93%A6%20template~plugin~folder-note~index%20%F0%9F%97%BA.md) within the Folder Note plugin settings
 
 ## Overview
 
