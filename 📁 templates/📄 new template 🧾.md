@@ -21,6 +21,7 @@
 aliases     :: template
 created     :: 2021-07-28T02:45:20-04:00
 description :: new template
+publish     :: true
 requires    :: templater-obsidian
 scope       :: 
 tags        :: #Obsidian/note/template, #Obsidian/plugin/templater-obsidian

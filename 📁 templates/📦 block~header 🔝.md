@@ -8,10 +8,11 @@
 
 ## meta~data
 
-```
+```dataviewfield
 aliases     :: header
 created     :: 2021-08-05T20:17:54-04:00
 description :: header (title, description, & modified) for templates
+publish     :: true
 requires    :: dataview, templater-obsidian
 scope       :: 
 tags        :: #Obsidian/template/block/header, #Obsidian/plugin/dataview, #Obsidian/plugin/templater-obsidian, javascript

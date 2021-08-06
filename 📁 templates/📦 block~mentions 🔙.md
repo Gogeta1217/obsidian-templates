@@ -1,4 +1,4 @@
-## Mentions <% tp.file.title %>
+## `fas:Comment` Mentions <% tp.file.title %>
 
 ```query
 "<% tp.file.title %>" -file:(<% tp.file.title %>)
@@ -14,9 +14,10 @@
 aliases     :: mentions
 created     :: 2021-07-28T02:52:01-04:00
 description :: inline [[software~obsidian#Query|Obsidian query]] of references to current file
-requires    :: templater-obsidian
+publish     :: true
+requires    :: obsidian-icons-plugin, templater-obsidian
 scope       :: 
-tags        :: #Obsidian/template/block/mentions, #Obsidian/plugin/templater-obsidian
+tags        :: #Obsidian/template/block/mentions, #Obsidian/plugin/obsidian-icons-plugin, #Obsidian/plugin/templater-obsidian
 title       :: 📦 mentions 🔙
 type        :: template~block~mentions
 uuid        :: 4a9e0f99-7e50-4257-94d0-ad0c7ae64c7e

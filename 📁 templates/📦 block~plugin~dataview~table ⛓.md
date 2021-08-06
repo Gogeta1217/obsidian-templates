@@ -13,11 +13,12 @@ SORT file.mtime DESC
 ```dataviewfield
 aliases     :: dataview table
 created     :: 2021-08-05T15:21:13-04:00
-description :: table sorted by recently modified files
+description :: table sorted by recently modified
+publish     :: true
 requires    :: dataview, templater-obsidian
 scope       :: 
 tags        :: #Obsidian/template/block/table, #Obsidian/plugin/dataview, sql, #Obsidian/plugin/templater-obsidian
-title       :: 📦 table~dataview 🗺
+title       :: 📦 table~dataview ⛓
 type        :: template~block~table~plugin~dataview
 uuid        :: 51b3279f-aebb-4f6a-ba08-161f9a3cf7de
 version     :: 1

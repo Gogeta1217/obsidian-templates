@@ -15,6 +15,7 @@ dv.paragraph(dv.current());
 aliases     :: debug dataview
 created     :: 2021-08-05T14:25:41-04:00
 description :: evaluate [[software~Obsidian~plugin~dataview|Dataview]] `dv.current()` object with `dv.paragraph()` as markdown list
+publish     :: true
 requires    :: dataview, templater-obsidian
 scope       :: 
 tags        :: #Obsidian/template/block/DEBUG, #Obsidian/plugin/dataview, #Obsidian/plugin/templater-obsidian

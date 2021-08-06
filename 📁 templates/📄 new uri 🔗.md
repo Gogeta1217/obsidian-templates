@@ -12,7 +12,7 @@ let parsedUri;
 // split the filename into parts
 let parsedFileName = tp.file.title.match(matchFileNameCustom)?.groups
 // uri data
-let uri = {};
+const uri = {};
 // new note from templater-obsidian:insert-templater
 if (tp.config.run_mode === 1) {
     // prompt for uri
@@ -68,7 +68,7 @@ tR += (await tp.file.include('[[📦 block~yaml ✉]]'))
         'Obsidian/uri', true))?.replace(/\s+/g,'').trim().split(',').join(', ')}]`)
     // preserve existing uuid
     .replace(/^((?:[ ]+)?uuid(?:[ ]+)?:)(?:[ ]+)?(.*)$/gm, 
-        `$1 ${tp.frontmatter?.uuid ?? '$2'}`)
+        `$1 &uuid ${tp.frontmatter?.uuid ?? '$2'}`)
     // replace metadata.description
     .replace(/^((?:[ ]+)?description(?:[ ]+)?:)(?:[ ]+)?$/gm, 
         `$1 "${uri.description}"`)
@@ -88,11 +88,11 @@ tR += (await tp.file.include('[[📦 block~yaml ✉]]'))
 
 ---
 
-<%* tR += (await tp.file.include('[[📦 block~header 🔝]]')); %>
+<% await tp.file.include('[[📦 block~header 🔝]]') %>
 
 ---
 
-## Links <% uri.data %>
+## `fas:Link` Links <% uri.data %>
 
 ```query
 /<%*
@@ -121,6 +121,7 @@ tR += (parsedUri.subdomain === `${parsedUri.domain ?? ''}.${parsedUri.tld ?? ''}
 aliases     :: uri, new bookmark entry, new allowlist entry, new denylist entry
 created     :: 2021-07-28T03:20:09-04:00
 description :: uri entries (type: bookmarks, allowlist, denylist)
+publish     :: true
 requires    :: obsidian-auto-link-title, dataview, templater-obsidian
 scope       :: 
 tags        :: #Obsidian/template/note/uri, #Obsidian/plugin/obsidian-auto-link-title, #Obsidian/plugin/dataview, #Obsidian/plugin/templater-obsidian

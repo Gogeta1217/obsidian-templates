@@ -9,6 +9,7 @@
 aliases     :\: x type
 created     :\: <%* tR += moment().format(); %>
 description :\: template for x entries
+publish     :\: 
 requires    :\: plugin~y
 scope       :\: 
 tags        :\: \#Obsidian/template/type/x
@@ -37,6 +38,7 @@ _%>
 aliases     :: meta
 created     :: 2021-07-28T01:37:29-04:00
 description :: meta section (data + headings) for templates
+publish     :: true
 requires    :: dataview, templater-obsidian
 scope       :: 
 tags        :: #Obsidian/template/block/template/meta
@@ -61,6 +63,7 @@ version     :: 0.1
 
 - `tp.file.include` statement has to strip code and metadata like `<\%* tR += (await tp.file.include('[[📦 template~block~template~meta]]')).replace(/<\\%/g, '<%').replace(/:\\:/g, '::').replace(/\\#/g, '#').replace(/\n+$/, ''); %>`
 - metadata is pretty redundant in this example but the extra fields may come in handy later
+- since i broke `templater-obsidian:insert-templater` with this template, i have been opening the console and using `copy()` with unreplaced template code 
 
 ## meta~inbox
 

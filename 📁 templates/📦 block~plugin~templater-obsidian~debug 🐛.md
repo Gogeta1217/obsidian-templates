@@ -13,6 +13,7 @@
 aliases     :: debug templater
 created     :: 2021-08-05T14:27:11-04:00
 description :: evaluate [[software~Obsidian~plugin~templater-obsidian|Templater]] `tp` object via [[software~obsidian#Console|Obsidian console]] (`ctrl+shift+i`)
+publish     :: true
 requires    :: templater-obsidian
 scope       :: 
 tags        :: #Obsidian/template/block/DEBUG, #Obsidian/plugin/templater-obsidian
