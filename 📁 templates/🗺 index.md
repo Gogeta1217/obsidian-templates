@@ -2,7 +2,7 @@
 # for [[software~Obsidian~plugin~obsidian-advanced-uri]]
 uuid    : &uuid 34b41476-5a80-4989-b8d3-d8a5f209d119
 # built-in [[obsidian~yaml]]
-aliases : [*uuid, 📁 templates 🗺 overview, template table, overview of 📁 templates, 📁 templates]
+aliases : [*uuid, templates 📁 overview 🗺, templates 📁 table ⛓, 📁 templates]
 cssclass: 
 publish : 
 tags    : [Obsidian/plugins/folder-note, overview, table]
@@ -22,7 +22,7 @@ metadata:
         archived: false
         reviewed: false
     title       : 🗺 Overview of 📁 templates
-    type        : note~overview~table
+    type        : overview~table
 # this note's template
 source:
     publish : true
@@ -62,6 +62,7 @@ dv.table(
         'Requires',
         //'UUID',
         'Version',
+        'Links',
         'TODO',
         //'CSS Class',
         //'Breadcrumbs',
@@ -128,6 +129,8 @@ dv.table(
         //n?.uuid ? `\`${n?.uuid}\`` : null,
     // Version
         n?.version ?? n?.source?.version,
+    // Links
+        (n.file.outlinks?.length === 0 && n.file.inlinks?.length === 0) ? '❌' : `🔽 ${n.file.inlinks.length} 🔼 ${n.file.outlinks.length}`,
     // TODO
         Array.from(new Set(dv.array(n.file.tasks).map(v => {
             let m = v.text.match(/(?<todo>\#todo)/i)?.groups?.todo.toLowerCase(); 

@@ -1,6 +1,6 @@
 # `=this.metadata.title`
 
-**`=this.metadata.description`**, modified: _`$=moment(dv.current().file.mtime.toString()).format("LLLL")`_
+**`=this.metadata.description`**, modified: _`$=moment(dv.current().file.mtime.toString()).format('LLLL')`_
 
 <%_*
 /*

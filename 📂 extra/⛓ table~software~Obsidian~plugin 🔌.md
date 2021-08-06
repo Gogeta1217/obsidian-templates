@@ -22,7 +22,7 @@ metadata:
         archived: false
         reviewed: false
     title       : 🗺 Overview of Obsidian plugins 🔌
-    type        : note~overview~table
+    type        : overview~table
 # this note's template
 source:
     publish : true

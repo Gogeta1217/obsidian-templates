@@ -93,4 +93,4 @@ Editor
 
 Preview
 
-> ![Pasted image 20210806122447.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210806122447.png)
+> ![Pasted image 20210806151016.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210806151016.png)

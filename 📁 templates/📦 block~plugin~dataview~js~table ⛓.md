@@ -21,8 +21,9 @@ dv.table(
         //'Tags',
         //'UUID',
         //'Version',
+        'Links',
         'Task',
-        ////'Breadcrumbs',
+        //'Breadcrumbs',
         //'CSS Class',
         //'Datetime',
         //'File',
@@ -79,6 +80,8 @@ dv.table(
         //n?.uuid ? `\`${n?.uuid}\`` : null,
     // Version
         //n?.version ?? n?.source?.version,
+    // Links   
+        (n.file.outlinks?.length === 0 && n.file.inlinks?.length === 0) ? '❌' : `🔽 ${n.file.inlinks.length} 🔼 ${n.file.outlinks.length}`,
     // Task
         Array.from(new Set(dv.array(n.file.tasks).map(v => {
             let m = v.text.match(/(?<t>\#)/i)?.groups?.t.toLowerCase(); 
