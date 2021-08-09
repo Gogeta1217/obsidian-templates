@@ -36,18 +36,19 @@ source:
 
 ## Plugins
 
-### Required
+### Required to properly render elements
 
+- [Admonition](https://github.com/valentine195/obsidian-admonition)
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
+- [Icons](https://github.com/visini/obsidian-icons-plugin)
 - [Templater](https://github.com/SilentVoid13/Templater)
 
-### Optional
+### Optional for template generation
 
 - [Auto Link Title](https://github.com/zolrath/obsidian-auto-link-title)
 - [Advanced Obsidian URI](https://github.com/Vinzent03/obsidian-advanced-uri)
 - [Breadcrumbs](https://github.com/SkepticMystic/breadcrumbs)
 - [Folder Note](https://github.com/xpgo/obsidian-folder-note-plugin)
-- [Icons](https://github.com/visini/obsidian-icons-plugin)
 - [Julian Date](https://github.com/THeK3nger/obsidian-juliandate)
 
 ## How to use
