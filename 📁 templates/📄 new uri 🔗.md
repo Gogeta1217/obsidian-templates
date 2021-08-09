@@ -122,6 +122,7 @@ tR += (parsedUri.subdomain === `${parsedUri.domain ?? ''}.${parsedUri.tld ?? ''}
 aliases     :: uri, new bookmark entry, new allowlist entry, new denylist entry
 created     :: 2021-07-28T03:20:09-04:00
 description :: uri entries (type: bookmarks, allowlist, denylist)
+mobile      :: true
 publish     :: true
 requires    :: obsidian-auto-link-title, dataview, templater-obsidian
 scope       ::
@@ -134,7 +135,7 @@ version     :: 1
 
 ## meta~todo
 
-- [x] #Obsidian/template/note/uri/refactor get rid of spaghetti code (links to [[global]]) #TODO
+- [x] #Obsidian/template/note/uri/refactor get rid of spaghetti code (links to [[📑 library~template]]) #TODO
 - [x] #Obsidian/template/note/uri/refactor remove custom resolution white space #TODO
 - [ ] #Obsidian/template/note/uri/regex match metadata.<subproperly> properly to avoid mismatching #TODO
 - [ ] #Obsidian/template/note/uri/rename check for existing file, cancel generation, delete file and then open existing file? #TODO

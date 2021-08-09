@@ -1,7 +1,10 @@
 #Obsidian/plugin/dataview/DEBUG
 
 ```dataviewjs
+
+console.log(dv);
 dv.paragraph(dv.current());
+
 ```
 
 <%-*
@@ -14,7 +17,7 @@ dv.paragraph(dv.current());
 ```dataviewfield
 aliases     :: debug dataview
 created     :: 2021-08-05T14:25:41-04:00
-description :: evaluate [[software~Obsidian~plugin~dataview|Dataview]] `dv.current()` object with `dv.paragraph()` as markdown list
+description :: evaluate [[software~Obsidian~plugin~dataview|Dataview]] `dv.current()` object with `dv.paragraph()` and `dv` object in console (`ctrl+shift+i`) as markdown list
 publish     :: true
 requires    :: dataview, templater-obsidian
 scope       :: 

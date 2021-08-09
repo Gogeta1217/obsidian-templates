@@ -62,7 +62,7 @@ metadata:
     type        : 
 # this note's template
 source:
-    publish : false
+    publish : 
   # target  : <%* tR += `"[[${tp.config.target_file.path}]]"` %>
     template: <%* tR += `"[[${tp.config.template_file.path}]]"` %>
     version : <%* tR += `${this.app.plugins.getPlugin('dataview')?.api?.page(tp.config.template_file.path)?.version ?? tp.config.template_file.stat.mtime}` %>
@@ -77,7 +77,7 @@ source:
 ```dataviewfield
 aliases     :: yaml
 created     :: 2021-08-05T16:37:53-04:00
-description :: yaml containing [[software~Obsidian#yaml|built-in]], [[softwarw~Obsidian~plugin~obsidian-advanced-uri|Advanced Obsidian URI]], [[software~Obsidian~plugin~breadcrumbs|Breadcrumbs]], and [[software~Obsidian~plugin~obsidian-juliandate|Julian Date]] fields
+description :: `yaml` containing [[software~Obsidian#yaml|built-in]], [[softwarw~Obsidian~plugin~obsidian-advanced-uri|Advanced Obsidian URI]], [[software~Obsidian~plugin~breadcrumbs|Breadcrumbs]], and [[software~Obsidian~plugin~obsidian-juliandate|Julian Date]] fields
 publish     :: true
 requires    :: breadcrumbs, dataview, obsidian-advanced-uri, obsidian-juliandate, templater-obsidian
 scope       :: 
@@ -90,7 +90,7 @@ version     :: 1
 
 ## meta~todo
 
-- [ ] #Obsidian/template/block/yaml create a loop for other templates to preserve existing frontmatter data when overwriting a file - see yaml `uuid` replace operation within [[📄 new uri 🔗]] for example #TODO
+- [ ] #Obsidian/template/block/yaml create a loop for other templates to preserve existing frontmatter data when overwriting a file - see yaml `uuid` replace operation within [[📁 templates/📄 new uri 🔗]] for example #TODO
 
 ## meta~notes
 

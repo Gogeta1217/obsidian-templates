@@ -1,6 +1,13 @@
 #Obsidian/plugin/templater-obsidian/DEBUG
 
-<%*+ console.log(tp); %>
+```templater
+
+<%*+ 
+console.log(tp);
+%>
+
+```
+
 
 <%-*
 /*

@@ -58,11 +58,11 @@ source:
 
 ### Optional steps
 
-- Set your [Folder Note](https://github.com/xpgo/obsidian-folder-note-plugin) template to the contents of [`📦 template~plugin~folder-note~index 🗺`](%F0%9F%93%81%20templates/%F0%9F%93%A6%20template~plugin~folder-note~index%20%F0%9F%97%BA.md) within the Folder Note plugin settings
+- Set your [Folder Note](https://github.com/xpgo/obsidian-folder-note-plugin) template to the contents of [`📦 plugin~folder-note~index 🗺`](📦%20plugin~folder-note~index%20🗺.md) within the Folder Note plugin settings
 
 ## Overview
 
-![Pasted image 20210806120457.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210806120457.png)
+![Pasted image 20210808213603.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210808213603.png)
 
 ## Extra
 
@@ -74,7 +74,7 @@ Preview
 
 ## Templates
 
-### [`📄 new uri 🔗.md`](%F0%9F%93%81%20templates/%F0%9F%93%84%20new%20uri%20%F0%9F%94%97.md)
+### [`📄 new uri 🔗.md`](📁%20templates/📄%20new%20uri%20🔗.md)
 
 Editor
 
@@ -89,8 +89,8 @@ Metadata table provided by [Obsidian Metatable](https://github.com/arnau/obsidia
 
 Editor
 
-> ![Pasted image 20210806122721.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210806122721.png)
+> ![Pasted image 20210808004951.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210808004951.png)
 
-Preview
+Preview of [`📦 plugin~folder-note~index 🗺`](%F0%9F%93%81%20templates/%F0%9F%93%A6%20plugin~folder-note~index%20%F0%9F%97%BA.md)
 
-> ![Pasted image 20210806151016.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210806151016.png)
+> ![Pasted image 20210808004844.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210808004844.png)

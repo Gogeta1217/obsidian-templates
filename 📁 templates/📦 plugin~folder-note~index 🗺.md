@@ -1,26 +1,31 @@
 ---
 <%*
+if (tp.file.path(false).match(/Error_MobileUnsupportedTemplate/i)) { 
+    const notice = `${tp.config.template_file.name} is not supported on mobile.`;
+    new Notice(notice, 2000);
+    return;
+}
+const timerLabel = `${tp.file.path(true)}:templater.generate@${moment().format('YYYYMMDDHHmmss')}`;
+console.time(timerLabel);
 const folder = tp.file.folder(false) !== '' ? tp.file.folder(false) : this.app.vault.adapter.getName();
-const folderPath = tp.file.folder(true)?.trim() ?? '/';
+const folderPath = (tp.file.folder(true) ?? tp.file.path(false).replace(/\\/g, '/')) ?? '/';
 const matchEmoji = /[^\x00-\x7F]+/g;
-console.log(folder);
-const folderAlias = `${folder?.replace(matchEmoji, '').trim()} ${folder?.match(matchEmoji)?.join('')}`;
-console.log(folderAlias);
+const folderAlias = `${folder?.replace(matchEmoji, '').trim()} ${folder?.match(matchEmoji)?.join('') ?? ''}`.trim();
 tR += (await tp.file.include('[[📦 block~yaml ✉]]'))
     // remove yaml directives
     .replace(/^---/gm, '')
     // replace aliases
     .replace(/^((?:[ ]+)?aliases(?:[ ]+)?:)(?:[ ]+)?(.*)$/gm,
-        `$1 [${'$2, ' ?? ''}${folderAlias} overview 🗺, ${folderAlias} table ⛓, overview 🗺 of ${folderAlias}, ${folder}]`)            
+        `$1 [${'$2, ' ?? ''}"${folderAlias} overview 🗺", "overview 🗺 of ${folderAlias}", "${folderAlias} table ⛓", "table ⛓ of ${folderAlias}", "${folder}"]`)            
     // replace tags
     .replace(/^((?:[ ]+)?tags(?:[ ]+)?:)(?:[ ]+)?$/gm,
-        `$1 [Obsidian/plugin/folder-note, overview, index, table]`)
+        `$1 [Obsidian/plugin/folder-note-plugin, overview, index, table]`)
     // preserve existing uuid
     .replace(/^((?:[ ]+)?uuid(?:[ ]+)?:)(?:[ ]+)?(.*)$/gm,
         `$1 ${tp.frontmatter?.uuid ? `&uuid ${tp.frontmatter?.uuid}` : '$2'}`)
     // replace metadata.description
     .replace(/^((?:[ ]+)?description(?:[ ]+)?:)(?:[ ]+)?$/gm,
-        `$1 "files and file properties within [\`${folderPath}\`](` + encodeURI(`file:///${app.vault.adapter.getFullPath(folderPath.replace(/\\/g, '/'))}`) + ')"')
+        `$1 "files and file properties within [\`${folderPath}\`](` + encodeURI(`file:///${tp.file.folder(true).replace(/\\/g, '/')}`) + ')"')
     // replace metadata.title
     .replace(/^((?:[ ]+)?title(?:[ ]+)?:)(?:[ ]+)?.*$/gm,
         `$1 🗺 Overview of ${folder}`)
@@ -28,6 +33,7 @@ tR += (await tp.file.include('[[📦 block~yaml ✉]]'))
     .replace(/^((?:[ ]+)?type(?:[ ]+)?:)(?:[ ]+)?$/gm,
         `$1 overview~table`)
     .trim();
+
 %>
 
 ---
@@ -54,6 +60,7 @@ tR += (await tp.file.include('[[📦 block~yaml ✉]]'))
 aliases     :: folder-note
 created     :: 2021-08-05T22:54:34-04:00
 description :: [[software~Obsidian~plugin~folder-note-plugin|Folder Note]] template
+mobile      :: false
 publish     :: true
 requires    :: folder-note-plugin, templater-obsidian
 scope       :: 
@@ -73,4 +80,5 @@ version     :: 2
 ## meta~inbox
 
 */
+console.timeEnd(timerLabel);
 _%>

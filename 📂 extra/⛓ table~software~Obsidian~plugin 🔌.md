@@ -2,7 +2,7 @@
 # for [[software~Obsidian~plugin~obsidian-advanced-uri]]
 uuid    : &uuid 9098c2af-3ddf-4ad4-b488-2b634e455440
 # built-in [[software~Obsidian#yaml]]
-aliases : [*uuid, "obsidian plugins 🔌 overview 🗺", "obsidian plugin 🔌 table ⛓", "overview 🗺 of obsidian plugins 🔌"]
+aliases : [*uuid, "obsidian plugins 🔌 overview 🗺", "overview 🗺 of obsidian plugins 🔌", "obsidian plugin 🔌 table ⛓", "table ⛓ of obsidian plugin 🔌"]
 cssclass: 
 publish : 
 tags    : [Obsidian/plugin, overview, index, table]
@@ -41,6 +41,8 @@ source:
 ## `fas:Map` Table
 
 ```dataviewjs
+const timerLabel = `${dv.current().file.path}:update@${moment().format('YYYYMMDDHHmmss')}`;
+console.time(timerLabel);
 const basePath = this.app.vault.adapter.getBasePath();
 let pluginManifest = Array.from(new Map(Object.entries(this.app.plugins.manifests)).entries());
 //const {createButton} = app.plugins.getPlugin('buttons')
@@ -82,6 +84,7 @@ dv.table(
     //this.app.plugins.getPlugin(p[0])?.settings
     ])
 );
+console.timeEnd(timerLabel);
 ```
 
 ## `fas:Comment` Mentions 🗺 table~software~Obsidian~plugin 🔌
