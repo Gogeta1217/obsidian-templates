@@ -21,7 +21,7 @@ metadata:
     status      :
         archived: false
         reviewed: false
-    title       : 🗺 overview of 📁 templates
+    title       : 🗺 Overview of 📁 templates
     type        : overview~table
 # this note's template
 source:
@@ -34,7 +34,15 @@ source:
 
 # `=this.metadata.title`
 
-**`=this.metadata.description`**, modified: _`$=moment(dv.current().file.mtime.toString()).format('LLLL')`_
+**`=this.metadata.description`**, modified: _`$=moment(dv.current().file.mtime.toString()).format('LLLL')`
+
+---
+
+```ad-info
+
+This note is intended as an overview of template files. It should not be included in other templates via `tp.file.include()` or inserted into notes as a template.
+
+```
 
 ---
 
@@ -321,7 +329,7 @@ source:
 ## TODO
 
 - [ ] #Obsidian/template/-/structure/refactor add better comments and more functions for redundant code #TODO
-- [ ] #Obsidian/template/-/reference/refactor use '\[[\]]' syntax when referencing files within code (ex: [[📑 library~template]]) so that rename events update references #TODO
+- [ ] #Obsidian/template/-/reference/refactor use '\[[\]]' syntax when referencing files within code (ex: [[📑 library~templates]]) so that rename events update references #TODO
     - does this work in codeblocks? #INVESTIGATE
 - [ ] #Obsidian/template/-/component/yaml/refactor upgrade yaml logic #TODO
 

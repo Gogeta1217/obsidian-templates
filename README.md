@@ -60,9 +60,9 @@ source:
 
 - Set your [Folder Note](https://github.com/xpgo/obsidian-folder-note-plugin) template to the contents of [`📦 plugin~folder-note~index 🗺`](📦%20plugin~folder-note~index%20🗺.md) within the Folder Note plugin settings
 
-## Overview
+## Overview of project templates
 
-![Pasted image 20210808213603.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210808213603.png)
+![Overview of project templates](%F0%9F%93%8E%20attachments/Pasted%20image%2020210808223243.png)
 
 ## Extra
 
@@ -70,7 +70,7 @@ source:
 
 Preview
 
-> ![Pasted image 20210806130940.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210806130940.png)
+> ![Preview of ⛓ table~software~Obsidian~plugin 🔌](%F0%9F%93%8E%20attachments/Pasted%20image%2020210806130940.png)
 
 ## Templates
 
@@ -78,19 +78,19 @@ Preview
 
 Editor
 
-> ![Pasted image 20210805213158.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210805213158.png)
+> ![Example editor view of 📄 new uri 🔗](%F0%9F%93%8E%20attachments/Pasted%20image%2020210805213158.png)
 
 Preview
 
-> ![Pasted image 20210805213053.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210805213053.png)
+> ![Example preview of 📄 new uri 🔗](%F0%9F%93%8E%20attachments/Pasted%20image%2020210805213053.png)
 Metadata table provided by [Obsidian Metatable](https://github.com/arnau/obsidian-metatable) in preview mode
 
 ### [`📦 block~plugin~dataview~js~table ⛓`](%F0%9F%93%81%20templates/%F0%9F%93%A6%20block~plugin~dataview~js~table%20%E2%9B%93.md)
 
 Editor
 
-> ![Pasted image 20210808004951.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210808004951.png)
+> ![Example editor view of 📦 block~plugin~dataview~js~table ⛓](%F0%9F%93%8E%20attachments/Pasted%20image%2020210808004951.png)
 
 Preview of [`📦 plugin~folder-note~index 🗺`](%F0%9F%93%81%20templates/%F0%9F%93%A6%20plugin~folder-note~index%20%F0%9F%97%BA.md)
 
-> ![Pasted image 20210808004844.png](%F0%9F%93%8E%20attachments/Pasted%20image%2020210808004844.png)
+> ![Example preview of 📦 plugin~folder-note~index 🗺](%F0%9F%93%8E%20attachments/Pasted%20image%2020210808004844.png)
